@@ -1,95 +1,47 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-    	<meta charset="utf-8">
-        <title>QuikShut</title>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>QuikShut</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <div class="nav-container">
+          <li><a href="qslite.html" class="disabled">QS Lite</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="index.html" class="active">QS</a></li>
+        </div>
+      </ul>
+    </nav>
 
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Kanit:300,300i|Roboto:300,400" rel="stylesheet">
-        <link href="css/featherlight.min.css" type="text/css" rel="stylesheet"/>
-        <link href="css/featherlight.gallery.min.css" type="text/css" rel="stylesheet"/>
-        <script src="https://use.fontawesome.com/cd7fa07e53.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </head>
-    <body id="home">
-    	<div class="top-nav">
-    		<a href="#" class="italic">DSD/<span class="red">UK</span></a>
-    	</div>
-    	<!-- Main Body -->
-    	<div id="content">
-    		<h1 class="jumbo italic noselect">QuikShut</h1>
-    		<p class="sub noselect">A simple, smart tool to control when your PC powers off.</p>
-    	</div>
+    <section class="section-header">
+      <div class="header-container">
+        <h1>Utilising a simple function, QuikShut is a small application that you can use to power off your PC, whenever you want.</h1>
+        <a href="https://www.dropbox.com/s/z0jzvstajx9xswl/QS-2017-11.rar?dl=0" class="button">Download QS 2017.11</a>
+      </div>
+      <div class="picture-container">
+        <img src="img/quikshut-main.PNG" alt="QuikShut Main">
+      </div>
+    </section>
 
-    	<div class="bottom">
-    	<a href="#second-page">
-    		<i class="fa fa-angle-double-down fa-3x fa-btn" aria-hidden="true" id="scroll-down"></i>
-    	</a>
-    	</div>
-    	<!-- Second Page -->
-    	<div id="second-page" class="second-page">
-    		<div class="card" id="about">
-    			<h2 class="subheading italic">ABOUT</h2>
-    				<p>QuikShut is a simple, efficient method of choosing when you want your PC to shut down. It was designed with maintainence and downloading operations in mind, allowing you to turn off your PC after it's operations are complete.</p>
-    				<div class="img-display">
-    					<a href="img/main.png" data-featherlight="image"><img src="img/main.png" alt="Example" class="sp-image"></a>              
-              <a href="img/date_picker.png" data-featherlight="image"><img src="img/date_picker.png" alt="Example" class="sp-image"></a>
-              <a href="img/time_picker.png" data-featherlight="image"><img src="img/time_picker.png" alt="Example" class="sp-image"></a>
-    				</div>
-    		</div>
-    		<div class="card" id="download">
-    			<h2 class="subheading italic">DOWNLOAD</h2>
-    				<p>QuikShut will always be completely free. However, if you'd like to contribute in order to sustain this project and general development. You can choose to do so of your own accord. It will be greatly appreciated!</p>
-    			<a href="http://bit.ly/qs_dropbox_repo" class="button">Download<i class="fa fa-download fa-la fa-btn btn-icon" aria-hidden="true" id="scroll-down"></i></a>
-    		</div>
-    	</div>
+    <section id="section-content">
+      <div class="content-container">
+        <h2>QuikShut was designed to be simple. Using a date and time picker, selecting the exact time you want to shut down is as easy as can be!</h2>
+        <img src="img/time_picker.png" alt="Example Image" class="placeholder-img">
+        <hr>
+        <h2 style="padding-bottom: 2em;">Using the Material Design language, QuikShut is simple and beautiful. So what are you waiting for? Get downloading!</h2>
+        <a href="https://www.dropbox.com/s/z0jzvstajx9xswl/QS-2017-11.rar?dl=0" class="button" style="font-size: 1em;">Download QS 2017.11</a>
+      </div>
+      <footer style="margin-top: 2em;">
+          <p>If you have any questions or enquires, contact me at: <a href="mailto:dsduk@outlook.com" style="color: whitesmoke;">dsduk@outlook.com</a></p>
+      </footer>
+    </section>
 
-    	<footer>
-    		<p>© Copyright 2017 <a href="#" class="italic">DSD/<span class="red">UK</span></a></p>	
-    	</footer>
 
-    	<script>
-    		$(window).scroll(function() {
 
-    		if ($(this).scrollTop() > 0)
-     		{
-        		$('#scroll-down').fadeOut();
-     		}
-    		else
-     		{
-      			$('#scroll-down').fadeIn();
-     		}
- 		});
-    	</script>
-    	<script>
-    		// Select all links with hashes
-			$('a[href*="#"]')
-  			// Remove links that don't actually link to anything
-  			.not('[href="#"]')
-  			.not('[href="#0"]')
-  			.click(function(event) {
-    		// On-page links
-    		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      			&& location.hostname == this.hostname) {
-      			// Figure out element to scroll to
-      			var target = $(this.hash);
-      			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      		// Does a scroll target exist?
-      		if (target.length) {
-        	// Only prevent default if animation is actually gonna happen
-       		event.preventDefault();
-        	$('html, body').animate({
-          	scrollTop: target.offset().top
-        	}, 1000, function() {
-        	});
-      		}
-    		}
-  			});
-    	</script>
-
-    	<script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-    	<script src="js/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
-
-    </body>
+  </body>
 </html>
